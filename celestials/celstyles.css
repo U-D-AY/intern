@@ -1,0 +1,73 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0); /* Default background */
+    overflow: hidden; /* Prevents scrolling */
+}
+
+/* Background */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('E:/SPACE EXPLORER/celestial-images/mars surf.jpg') no-repeat center center/cover;
+    z-index: -2;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8) 80%);
+    z-index: -1;
+}
+
+/* Title Style */
+h2 {
+    font-size: 3rem;
+    margin: 2rem 0;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 50px var(--glow-color);
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px var(--glow-color), 0 0 30px var(--glow-color);
+    }
+    to {
+        text-shadow: 0 0 20px var(--glow-color), 0 0 50px var(--glow-color);
+    }
+}
+
+/* Facts Section */
+.facts {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.facts ul {
+    list-style: none;
+    padding: 0;
+}
+
+.facts li {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-left: 3px solid var(--highlight-color);
+    background: rgba(255, 255, 255, 0.1);
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EXPLORE THE MARS</title>
+    <style>
+      /* Global Styles */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Arial", sans-serif;
+        color: white;
+        text-align: center;
+        background: rgba(0, 0, 0, 0); /* Default background */
+        overflow: hidden; /* Prevents scrolling */
+      }
+
+      /* Starry Background */
+      body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("/celestial-images/mars\ surf.jpg") no-repeat center
+          center/cover;
+        z-index: -2; /* Keeps stars behind everything */
+      }
+
+      body::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+          ellipse at center,
+          rgba(0, 0, 0, 0.144),
+          rgba(0, 0, 0, 0.63) 80%
+        );
+        z-index: -1; /* Keeps gradient overlay behind content */
+      }
+
+      /* Title Style */
+      h2 {
+        font-size: 3rem;
+        margin: 2rem 0;
+        /*text-transform: uppercase;*/
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 50px #f39c12;
+        animation: glow 2s infinite alternate;
+      }
+
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 10px #f39c12, 0 0 30px #f39c12;
+        }
+        to {
+          text-shadow: 0 0 20px #f39c12, 0 0 50px #f39c12;
+        }
+      }
+
+      /* Facts Section */
+      .facts {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 1rem;
+        text-align: left;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+      }
+
+      .facts ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .facts li {
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+        border-left: 3px solid #f39c12;
+        background: rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>LETS EXPLORE THE MARS</h2>
+    <div class="facts">
+      <h3>Interesting Facts About Mars</h3>
+      <ul>
+        <li>
+          Mars is also known as the Red Planet due to its reddish appearance.
+        </li>
+        <li>It has the largest volcano in the solar system, Olympus Mons.</li>
+        <li>Mars has two moons: Phobos and Deimos.</li>
+        <li>
+          A day on Mars is slightly longer than a day on Earth, lasting 24.6
+          hours.
+        </li>
+        <li>Temperatures on Mars can drop to as low as -140°C.</li>
+      </ul>
+    </div>
+  </body>
+</html>
